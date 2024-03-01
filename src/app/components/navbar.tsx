@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   return (
-    <div className="border-b py-2 px-4 flex justify-between fixed top-0 z-20 w-full">
+    <div className="border-b py-2 px-4 flex justify-between fixed top-0 z-20 w-full bg-background">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem className="flex gap-2 items-center">
@@ -23,7 +23,10 @@ export default function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="gap-2">
+          <NavigationMenuItem>
+            <ThemeToggle />
+          </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink href="/register">
               <Button>Register</Button>
